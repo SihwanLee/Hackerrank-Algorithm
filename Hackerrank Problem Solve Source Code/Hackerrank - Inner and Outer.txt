@@ -1,0 +1,11 @@
+import numpy
+import sys
+
+A = list(map(int, sys.stdin.readline().split()))
+B = list(map(int, sys.stdin.readline().split()))
+
+C = numpy.array(A)
+D = numpy.array(B)
+
+print(numpy.inner(C, D))
+print(numpy.outer(C, D))
