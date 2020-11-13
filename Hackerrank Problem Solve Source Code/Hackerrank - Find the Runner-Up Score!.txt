@@ -1,0 +1,10 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+    set_arr = set(arr)
+    list_set_arr = list(set_arr)
+    sorted_list = sorted(list_set_arr)
+    if len(sorted_list) == 1:
+        print(sorted_list[0])
+    else:
+        print(sorted_list[-2])
