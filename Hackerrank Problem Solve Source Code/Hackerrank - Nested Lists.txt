@@ -1,0 +1,19 @@
+if __name__ == '__main__':
+    records = []
+    for _ in range(int(input())):
+        name = str(input())
+        score = float(input())
+        records.append([name, score])
+    values = []
+    for i in records:
+        values.append(i[1])
+    values_set = set(values)
+    values_list = list(values_set)
+    values_list.sort()
+    same_score_students = []
+    for j in records:
+        if j[1] == values_list[1]:
+            same_score_students.append(j[0])
+    same_score_students.sort()
+    for k in same_score_students:
+        print(k)
