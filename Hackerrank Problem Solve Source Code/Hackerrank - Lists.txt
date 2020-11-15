@@ -1,0 +1,24 @@
+if __name__ == '__main__':
+    N = int(input())
+    final_list = []
+    
+    for i in range(N):
+        command, *numbers = input().split()
+        number = list(map(int, numbers))
+        if command == 'insert':
+            final_list.insert(number[0], number[1])
+        elif command == 'append':
+            final_list.append(number[0])
+        elif command == 'remove':
+            try:
+                final_list.remove(number[0])
+            except:
+                pass
+        elif command == 'print':
+            print(final_list)
+        elif command == 'sort':
+            final_list.sort()
+        elif command == 'reverse':
+            final_list = final_list[::-1]
+        elif command == 'pop':
+            del final_list[-1]
