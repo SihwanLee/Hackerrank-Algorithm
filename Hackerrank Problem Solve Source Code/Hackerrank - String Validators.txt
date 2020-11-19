@@ -1,0 +1,32 @@
+if __name__ == '__main__':
+    s = str(input())
+    
+    want1 = False
+    for i in s:
+        if i.isalnum():
+            want1 = True
+    print(want1)
+    
+    want2 = False
+    for i in s:
+        if i.isalpha():
+            want2 = True
+    print(want2)
+    
+    want3 = False
+    for i in s:
+        if i.isdigit():
+            want3 = True
+    print(want3)
+    
+    want4 = False
+    for i in s:
+        if i.islower():
+            want4 = True
+    print(want4)
+    
+    want5 = False
+    for i in s:
+        if i.isupper():
+            want5 = True
+    print(want5)
