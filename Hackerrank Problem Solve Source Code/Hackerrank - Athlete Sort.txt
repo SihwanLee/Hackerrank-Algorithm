@@ -1,0 +1,28 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    nm = input().split()
+
+    n = int(nm[0])
+    m = int(nm[1])
+
+    arr = []
+
+    for i in range(n):
+        arr.append(list(map(int, input().rstrip().split())))
+
+    k = int(input())
+    new_arr = sorted(arr, key=lambda x: x[k])
+    for j in new_arr:
+        for k in range(len(j)):
+            j[k] = str(j[k])
+        print(' '.join(j))
+    
