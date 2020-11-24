@@ -1,0 +1,12 @@
+A, B = map(int, input().split())
+
+half_num = A//2
+middle_word = int((B-7)/2)
+
+for i in range(half_num):
+    print('-'*(int((B-3)/2)-3*i) + '.' + '|..'*i + '|' + '..|'*i + '.' + '-'*(int((B-3)/2)-3*i))
+
+print('-'*middle_word + 'WELCOME' + '-'*middle_word)
+
+for j in reversed(range(half_num)):
+    print('-'*(int((B-3)/2)-3*int(j)) + '.' + '|..'*j + '|' + '..|'*j + '.' + '-'*(int((B-3)/2)-3*int(j)))
