@@ -1,0 +1,11 @@
+def print_formatted(number):
+    for i in range(1, number):
+        print(' '*(len(format(number, 'b')) - len(str(i))) + str(i) + 
+        ' '*(len(format(number, 'b'))+1 - len(format(i, 'o'))) + str(format(i, 'o')) + 
+        ' '*(len(format(number, 'b'))+1 - len(format(i, 'X'))) + str(format(i, 'X')) + 
+        ' '*(len(format(number, 'b'))+1 - len(format(i, 'b'))) + str(format(i, 'b')))
+    return print(' '*(len(format(number, 'b')) - len(str(i))) + str(number) + 
+        ' '*(len(format(number, 'b'))+1 - len(format(number, 'o'))) + str(format(number, 'o')) + 
+        ' '*(len(format(number, 'b'))+1 - len(format(number, 'X'))) + str(format(number, 'X')) + 
+        ' '*(len(format(number, 'b'))+1 - len(format(number, 'b'))) + str(format(number, 'b')))
+if __name__ == '__main__':
