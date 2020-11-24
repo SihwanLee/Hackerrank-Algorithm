@@ -1,0 +1,45 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the solve function below.
+def solve(s):
+    p = re.compile('\w*')
+    m = p.findall(s)
+    for i in range(len(m)):
+        m[i] = list(m[i])
+        if m[i] == []:
+            continue
+        else:
+            m[i][0] = m[i][0].upper()
+    
+    rearranged_list = []
+    
+    for j in m:
+        rearranged_list.append(''.join(j))
+    del rearranged_list[-1]
+    
+    new_list = []
+    
+    for k in rearranged_list:
+        if k == '':
+            new_string = k.replace('', ' ')
+            new_list.append(new_string)
+        else:
+            new_list.append(k)
+    return ''.join(new_list)
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = solve(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
