@@ -1,0 +1,15 @@
+import sys
+
+X = int(sys.stdin.readline())
+
+size_list = list(map(int, sys.stdin.readline().split()))
+
+N = int(sys.stdin.readline())
+
+earned = 0
+for i in range(N):
+    size, price = map(int, sys.stdin.readline().split())
+    if size in size_list:
+        earned += price
+        size_list.remove(size)
+print(earned)
