@@ -1,0 +1,13 @@
+from itertools import product
+import sys
+
+A = list(map(int, sys.stdin.readline().split()))
+B = list(map(int, sys.stdin.readline().split()))
+
+list_AB = list(product(A, B))
+str_list_AB = []
+
+for i in list_AB:
+    str_list_AB.append(str(i))
+    
+print(' '.join(str_list_AB))
