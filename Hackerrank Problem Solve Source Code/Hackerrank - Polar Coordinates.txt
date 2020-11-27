@@ -1,0 +1,16 @@
+from cmath import phase
+import re, sys
+
+def split(s, p = re.compile(r'([+-]*\d+)')):
+    return [e for e in p.split(s) if e]
+
+complex_num = sys.stdin.readline().strip()
+
+complex_num_list = split(complex_num)
+
+if len(complex_num_list) == 1:
+    print('%f\n%f' %(abs(complex(int(complex_num_list[0]), 0)), phase(complex(int(complex_num_list[0]), 0))))
+elif len(complex_num_list) == 2:
+    print('%f\n%f' %(abs(complex(0, int(complex_num_list[0]))), phase(0, complex(int(complex_num_list[0])))))
+elif len(complex_num_list) == 3:
+    print('%f\n%f' %(abs(complex(int(complex_num_list[0]), int(complex_num_list[1]))), phase(complex(int(complex_num_list[0]), int(complex_num_list[1])))))
