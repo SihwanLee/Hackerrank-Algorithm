@@ -1,0 +1,7 @@
+import calendar
+
+month, day, year = map(int, input().split())
+
+day_list = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY']
+
+print(day_list[calendar.weekday(year, month, day)])
