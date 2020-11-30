@@ -1,0 +1,21 @@
+import sys
+
+T = int(sys.stdin.readline())
+
+for i in range(T):
+    A, B = map(str, sys.stdin.readline().split())
+    try:
+        if int(A)%int(B) == 0:
+            print(int(int(A)/int(B)))
+        else:
+            print(int(A)/int(B))
+    except ZeroDivisionError:
+        print('Error Code: integer division or modulo by zero')
+    except ValueError:
+        if not A.isnumeric() and not B.isnumeric():
+            print('Error Code: invalid literal for int() with base 10: ' + "'" + A + "'" + "'" + B + "'")
+            break
+        if not A.isnumeric():
+            print('Error Code: invalid literal for int() with base 10: ' + "'" + A + "'")
+        if not B.isnumeric():
+            print('Error Code: invalid literal for int() with base 10: ' + "'" + B + "'")
