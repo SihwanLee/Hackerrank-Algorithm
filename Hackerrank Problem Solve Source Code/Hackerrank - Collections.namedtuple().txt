@@ -1,0 +1,14 @@
+from collections import namedtuple
+import sys
+
+N = int(sys.stdin.readline())
+
+name_column = sys.stdin.readline().split()
+
+total = 0
+for i in range(N):
+    students = namedtuple('student', name_column)
+    column1, column2, column3, column4 = sys.stdin.readline().split()
+    student = students(column1, column2, column3, column4)
+    total += int(student.MARKS)
+print("%.2f" %(total/N))
