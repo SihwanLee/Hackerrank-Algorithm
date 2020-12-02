@@ -1,0 +1,19 @@
+import re, sys
+
+N = int(sys.stdin.readline())
+
+pat1 = re.compile('[0-9]+')
+pat2 = re.compile('[a-z]+|[A-Z]+')
+
+item_list = {}
+
+for i in range(N):
+    item = sys.stdin.readline().strip()
+    item_name = ' '.join(pat2.findall(item))
+    item_price = int(pat1.findall(item)[0])
+    if not item_name in item_list:
+        item_list[item_name] =  item_price
+    else:
+        item_list[item_name] += item_price
+for j in item_list:
+    print("%s %s" %(j, item_list[j]))
