@@ -1,0 +1,11 @@
+import sys
+
+M = int(sys.stdin.readline())
+set_M = set(map(int, sys.stdin.readline().split()))
+N = int(sys.stdin.readline())
+set_N = set(map(int, sys.stdin.readline().split()))
+
+difference_list = list(set_M.difference(set_N)) + list(set_N.difference(set_M))
+
+for i in sorted(difference_list):
+    print(i)
