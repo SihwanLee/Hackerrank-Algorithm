@@ -1,0 +1,10 @@
+import re
+
+T= int(input())
+
+for i in range(T):
+    try:
+        p = re.compile(str(input()))
+        print(True)
+    except:
+        print(False)
