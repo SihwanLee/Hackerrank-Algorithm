@@ -1,0 +1,8 @@
+import sys
+
+N = int(sys.stdin.readline())
+a_set = set()
+
+for i in range(N):
+    a_set.add(input())
+print(len(a_set))
