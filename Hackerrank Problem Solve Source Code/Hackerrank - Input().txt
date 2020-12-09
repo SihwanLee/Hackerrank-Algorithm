@@ -1,0 +1,9 @@
+import sys
+
+x, k = map(int,sys.stdin.readline().split())
+p = eval(sys.stdin.readline().strip())
+
+if p == k:
+    print(True)
+else:
+    print(False)
