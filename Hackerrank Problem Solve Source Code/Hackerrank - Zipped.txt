@@ -1,0 +1,10 @@
+import sys
+
+N, M = map(int, sys.stdin.readline().split())
+scores = []
+
+for i in range(M):
+    scores += [(map(float, sys.stdin.readline().split()))]
+
+for j in zip(*scores):
+    print("%.1f" %(sum(j)/len(j)))
