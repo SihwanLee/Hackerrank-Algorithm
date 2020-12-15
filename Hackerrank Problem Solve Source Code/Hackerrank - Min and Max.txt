@@ -1,0 +1,11 @@
+import sys
+
+lists = []
+new_lists = []
+
+for i in range(list(map(int, sys.stdin.readline().split()))[0]):
+    lists.append(list(map(int, sys.stdin.readline().split())))
+
+for j in lists:
+    new_lists.append(min(j))
+print(max(new_lists))
