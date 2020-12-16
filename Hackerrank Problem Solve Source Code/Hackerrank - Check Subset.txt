@@ -1,0 +1,15 @@
+import sys
+
+T = int(sys.stdin.readline())
+
+for i in range(T):
+    num_A = int(sys.stdin.readline())
+    A = list(map(int, sys.stdin.readline().split()))
+    num_B = int(sys.stdin.readline())
+    B = list(map(int, sys.stdin.readline().split()))
+    for j in A:
+        if not j in B:
+            print(False)
+            break
+    else:
+        print(True)
